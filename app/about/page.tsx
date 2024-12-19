@@ -1,10 +1,11 @@
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { siteConfig } from "@/config/site";
 import { Metadata } from "next";
+import Image from "next/image";
+import logo from "@/assets/images/logo.png";
 
 export const metadata: Metadata = {
-  title: "About Me",
-  description: "Information about me",
+  title: "Sobre o site",
+  description: "Informações sobre o site",
 };
 
 export default async function AboutPage() {
@@ -13,32 +14,37 @@ export default async function AboutPage() {
       <div className="flex flex-col items-start gap-4 md:flex-row md:justify-between md:gap-8">
         <div className="flex-1 space-x-4">
           <h1 className="inline-block font-black text-4xl lg:text-5xl">
-            About Me
+            Sobre o site
           </h1>
         </div>
       </div>
       <hr className="my-8" />
       <div className="flex flex-col md:flex-row gap-8 items-center md:items-start">
         <div className="min-w-48 max-w-48 flex flex-col gap-2">
-          <Avatar className="h-48 w-48">
-            <AvatarImage src="/avatar.png" alt={siteConfig.author} />
-            <AvatarFallback>JC</AvatarFallback>
-          </Avatar>
+          <Image
+            className="h-48 w-48"
+            src={logo}
+            alt="Logo"
+            width={1000}
+            height={1000}
+            priority
+          />
           <h2 className="text-2xl font-bold text-center break-words">
-            {siteConfig.author}
+            {siteConfig.name}
           </h2>
-          <p className="text-muted-foreground text-center break-words">
-            Software Developer
-          </p>
         </div>
         <p className="text-muted-foreground text-lg py-4">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum
+          O site Filho Pródigo foi desenvolvido com o propósito de acolher e
+          ensinar aqueles que, após um período de afastamento, decidiram
+          retornar à fé católica. Ele serve como um guia espiritual para pessoas
+          que desejam compreender os fundamentos e ensinamentos da Igreja
+          Católica, proporcionando um espaço de aprendizado acessível, amigável
+          e respeitoso. A plataforma oferece conteúdo que explora as doutrinas,
+          práticas e valores essenciais do catolicismo, com o objetivo de ajudar
+          os fiéis a se reconectarem com sua espiritualidade e fortalecerem sua
+          caminhada de fé. Se você se encontra nesse caminho de retorno, Filho
+          Pródigo é o lugar ideal para redescobrir a beleza da fé católica e
+          trilhar um novo capítulo de vida com Deus.
         </p>
       </div>
     </div>

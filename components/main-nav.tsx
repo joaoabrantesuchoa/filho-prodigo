@@ -1,17 +1,26 @@
 "use client";
 
+import Image from "next/image";
 import { siteConfig } from "@/config/site";
-import { Icons } from "./icons";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
+import logo from "@/assets/images/logo.png";
 
 export function MainNav() {
   const pathname = usePathname();
   return (
     <nav className="flex items-center space-x-4 lg:space-x-6">
       <Link href="/" className="mr-6 flex items-center space-x-2">
-        <Icons.logo className="h-6 w-6" />
+        <Image
+          className="h-6 w-6"
+          src={logo}
+          alt="Logo"
+          width={1000}
+          height={1000}
+          priority
+        />
+
         <span className="font-bold">{siteConfig.name}</span>
       </Link>
       <Link
@@ -30,7 +39,7 @@ export function MainNav() {
           pathname === "/about" ? "text-foreground" : "text-foreground/60"
         )}
       >
-        About
+        Sobre
       </Link>
     </nav>
   );

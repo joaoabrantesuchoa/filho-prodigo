@@ -1,21 +1,31 @@
+import Image from "next/image";
+
 type IconProps = React.HTMLAttributes<SVGElement>;
+type IconImageProps = React.ComponentProps<typeof Image>;
+
+export const IconsImage = {
+  logo: (props: IconImageProps) => (
+    <Image
+      {...props}
+      src="/assets/images/logo.png"
+      alt="Logo"
+      width={500}
+      height={300}
+      priority
+    />
+  ),
+};
 
 export const Icons = {
-  logo: (props: IconProps) => (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
+  logo: (props: IconImageProps) => (
+    <Image
       {...props}
-    >
-      <path d="M4 11a9 9 0 0 1 9 9" />
-      <path d="M4 4a16 16 0 0 1 16 16" />
-      <circle cx="5" cy="19" r="1" />
-    </svg>
+      src="/assets/images/logo.png"
+      alt="Logo"
+      width={500}
+      height={300}
+      priority
+    />
   ),
   twitter: (props: IconProps) => (
     <svg

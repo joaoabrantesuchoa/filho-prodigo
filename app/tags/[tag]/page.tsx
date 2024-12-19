@@ -30,10 +30,11 @@ export const generateStaticParams = () => {
 
 export default function TagPage({ params }: TagPageProps) {
   const { tag } = params;
-  const title = tag.split("-").join(" ");
+  const decodedString = decodeURIComponent(tag);
+  const title = decodedString.split("-").join(" ");
 
-  const allPosts = getPostsByTagSlug(posts, tag);
-  const displayPosts = allPosts.filter(post => post.published);
+  const allPosts = getPostsByTagSlug(posts, decodedString);
+  const displayPosts = allPosts.filter((post) => post.published);
   const tags = getAllTags(posts);
   const sortedTags = sortTagsByCount(tags);
 
@@ -67,7 +68,7 @@ export default function TagPage({ params }: TagPageProps) {
               })}
             </ul>
           ) : (
-            <p>Nothing to see here yet</p>
+            <p>Nada para ver aqui ainda</p>
           )}
         </div>
         <Card className="col-span-12 row-start-3 h-fit sm:col-span-4 sm:col-start-9 sm:row-start-1">
