@@ -10,7 +10,7 @@ export default function Home() {
   const latestPosts = sortPosts(posts).slice(0, 5);
   return (
     <>
-      <section className="space-y-6 pb-3 pt-3 md:pb-12 md:mt-10 lg:py-10">
+      <section className="space-y-3 pb-3 pt-3 md:pb-12 md:mt-10 lg:py-10">
         <div className="container flex flex-col gap-4 items-center text-center">
           <Image
             src={header}

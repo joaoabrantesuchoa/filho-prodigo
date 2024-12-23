@@ -9,7 +9,15 @@ export function cn(...inputs: ClassValue[]) {
 
 export function formatDate(input: string | number): string {
   const date = new Date(input);
-  return date.toLocaleDateString("en-GB", {
+
+  if (isNaN(date.getTime())) {
+    console.error("Invalid date input:", input);
+    return "Invalid date";
+  }
+
+  const localDate = new Date(date.getTime() - date.getTimezoneOffset() * 60000);
+
+  return localDate.toLocaleDateString("pt-BR", {
     day: "2-digit",
     month: "2-digit",
     year: "numeric",
