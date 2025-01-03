@@ -5,7 +5,7 @@ import { siteConfig } from "@/config/site";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
-import logo from "@/assets/images/logo.png";
+import logo from "@/assets/images/logo.webp";
 
 export function MainNav() {
   const pathname = usePathname();

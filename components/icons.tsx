@@ -7,7 +7,7 @@ export const IconsImage = {
   logo: (props: IconImageProps) => (
     <Image
       {...props}
-      src="/assets/images/logo.png"
+      src="/assets/images/logo.webp"
       alt="Logo"
       width={500}
       height={300}
@@ -20,7 +20,7 @@ export const Icons = {
   logo: (props: IconImageProps) => (
     <Image
       {...props}
-      src="/assets/images/logo.png"
+      src="/assets/images/logo.webp"
       alt="Logo"
       width={500}
       height={300}

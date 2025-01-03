@@ -1,7 +1,7 @@
 import { siteConfig } from "@/config/site";
 import { Metadata } from "next";
 import Image from "next/image";
-import logo from "@/assets/images/logo.png";
+import logo from "@/assets/images/logo.webp";
 
 export const metadata: Metadata = {
   title: "Sobre o site",
