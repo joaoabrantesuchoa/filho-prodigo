@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
 import header from "@/assets/images/header.webp";
 
-export function HomeHeader() {
+const HomeHeader = () => {
   return (
     <section className="space-y-3 pb-3 pt-3 md:pb-12 md:mt-10 lg:py-10">
       <div className="container flex flex-col gap-4 items-center text-center">
@@ -30,3 +30,5 @@ export function HomeHeader() {
     </section>
   );
 }
+
+export default HomeHeader;

@@ -15,7 +15,7 @@ export type LatestPostsProps = {
 import React from "react";
 import { PostItem } from "./post-item";
 
-export const LatestPosts: React.FC<LatestPostsProps> = ({ posts }) => {
+const LatestPosts: React.FC<LatestPostsProps> = ({ posts }) => {
   return (
     <section className="container max-w-4xl py-6 lg:py-10 flex flex-col space-y-6 mt-20">
       <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-center">
@@ -43,3 +43,5 @@ export const LatestPosts: React.FC<LatestPostsProps> = ({ posts }) => {
     </section>
   );
 };
+
+export default LatestPosts;

@@ -37,10 +37,10 @@ export async function GET(req: NextRequest) {
             <p className="ml-2 font-bold text-2xl">O Filho Pródigo</p>
           </div>
           <div className="flex flex-col flex-1 py-10">
-            <div className="flex text-xl uppercase font-bold tracking-tight font-normal">
+            <div className="flex text-xl uppercase font-bold tracking-tight">
               BLOG POST
             </div>
-            <div className="flex text-[80px] font-bold text-[50px]">{heading}</div>
+            <div className="flex text-[80px] font-bold">{heading}</div>
           </div>
           <div className="flex items-center w-full justify-between">
             <div className="flex text-xl">{siteConfig.url}</div>

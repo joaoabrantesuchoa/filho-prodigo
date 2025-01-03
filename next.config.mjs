@@ -1,11 +1,4 @@
 // filepath: /d:/Projects/filho-prodigo/next.config.mjs
-import withBundleAnalyzer from "@next/bundle-analyzer";
-
-const bundleAnalyzer = withBundleAnalyzer({
-  // eslint-disable-next-line no-undef
-  enabled: typeof process !== "undefined" && process.env.ANALYZE === "true",
-});
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // other next config here...
@@ -15,7 +8,7 @@ const nextConfig = {
   },
 };
 
-export default bundleAnalyzer(nextConfig);
+export default nextConfig;
 
 class VeliteWebpackPlugin {
   static started = false;
