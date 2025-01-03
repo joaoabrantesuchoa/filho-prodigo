@@ -1,3 +1,4 @@
+import React from "react";
 import { siteConfig } from "@/config/site";
 import { Metadata } from "next";
 import Image from "next/image";

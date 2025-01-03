@@ -24,11 +24,14 @@ export function formatDate(input: string | number): string {
   });
 }
 
-export function sortPosts(posts: Array<Post>) {
-  return posts.sort((a, b) => {
-    if (a.date > b.date) return -1;
-    if (a.date < b.date) return 1;
-    return 0;
+export async function sortPosts(posts: Array<Post>): Promise<Array<Post>> {
+  return new Promise((resolve) => {
+    const sortedPosts = posts.sort((a, b) => {
+      if (a.date > b.date) return -1;
+      if (a.date < b.date) return 1;
+      return 0;
+    });
+    resolve(sortedPosts);
   });
 }
 

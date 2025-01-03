@@ -1,3 +1,4 @@
+import React from "react";
 import { NextRequest } from "next/server";
 import { ImageResponse } from "next/og";
 import { siteConfig } from "@/config/site";
@@ -25,24 +26,24 @@ export async function GET(req: NextRequest) {
 
     return new ImageResponse(
       (
-        <div tw="flex relative flex-col p-12 w-full h-full items-start text-black bg-white">
-          <div tw="flex items-center">
+        <div className="flex relative flex-col p-12 w-full h-full items-start text-black bg-white">
+          <div className="flex items-center">
             <Image
               src="assets\images\logo.jpg"
               alt="Example image"
               width={500}
               height={300}
             />
-            <p tw="ml-2 font-bold text-2xl">O Filho Pródigo</p>
+            <p className="ml-2 font-bold text-2xl">O Filho Pródigo</p>
           </div>
-          <div tw="flex flex-col flex-1 py-10">
-            <div tw="flex text-xl uppercase font-bold tracking-tight font-normal">
+          <div className="flex flex-col flex-1 py-10">
+            <div className="flex text-xl uppercase font-bold tracking-tight font-normal">
               BLOG POST
             </div>
-            <div tw="flex text-[80px] font-bold text-[50px]">{heading}</div>
+            <div className="flex text-[80px] font-bold text-[50px]">{heading}</div>
           </div>
-          <div tw="flex items-center w-full justify-between">
-            <div tw="flex text-xl">{siteConfig.url}</div>
+          <div className="flex items-center w-full justify-between">
+            <div className="flex text-xl">{siteConfig.url}</div>
           </div>
         </div>
       ),
@@ -59,7 +60,7 @@ export async function GET(req: NextRequest) {
         ],
       }
     );
-  } catch (error) {
+  } catch {
     return new Response("Failed to generate image", { status: 500 });
   }
 }

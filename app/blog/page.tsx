@@ -1,3 +1,4 @@
+import React from "react";
 import { posts } from "#site/content";
 import { PostItem } from "@/components/post-item";
 import { QueryPagination } from "@/components/query-pagination";
@@ -22,9 +23,9 @@ interface BlogPageProps {
 export default async function BlogPage({ searchParams }: BlogPageProps) {
   const currentPage = Number(searchParams?.page) || 1;
   const sortedPosts = sortPosts(posts.filter((post) => post.published));
-  const totalPages = Math.ceil(sortedPosts.length / POSTS_PER_PAGE);
+  const totalPages = Math.ceil((await sortedPosts).length / POSTS_PER_PAGE);
 
-  const displayPosts = sortedPosts.slice(
+  const displayPosts = (await sortedPosts).slice(
     POSTS_PER_PAGE * (currentPage - 1),
     POSTS_PER_PAGE * currentPage
   );

@@ -13,6 +13,7 @@ export type LatestPostsProps = {
 };
 
 import React from "react";
+import { PostItem } from "./post-item";
 
 export const LatestPosts: React.FC<LatestPostsProps> = ({ posts }) => {
   return (
@@ -28,10 +29,13 @@ export const LatestPosts: React.FC<LatestPostsProps> = ({ posts }) => {
                 key={post.slug}
                 className="first:border-t first:border-border"
               >
-                <article className="py-4 border-b">
-                  <h3 className="text-xl font-semibold">{post.title}</h3>
-                  <p className="text-muted-foreground">{post.description}</p>
-                </article>
+                <PostItem
+                  slug={post.slug}
+                  title={post.title}
+                  description={post.description}
+                  date={post.date}
+                  tags={post.tags}
+                />
               </li>
             )
         )}

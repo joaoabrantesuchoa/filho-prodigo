@@ -1,3 +1,4 @@
+import React from "react";
 import { getAllTags, sortTagsByCount } from "@/lib/utils";
 import { Metadata } from "next";
 import { posts } from "#site/content";

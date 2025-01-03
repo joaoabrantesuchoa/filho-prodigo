@@ -1,3 +1,4 @@
+import React from "react";
 import { posts } from "#site/content";
 import { PostItem } from "@/components/post-item";
 import { Tag } from "@/components/tag";
