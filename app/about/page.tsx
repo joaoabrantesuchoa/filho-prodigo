@@ -46,6 +46,11 @@ export default async function AboutPage() {
           caminhada de fé. Se você se encontra nesse caminho de retorno, Filho
           Pródigo é o lugar ideal para redescobrir a beleza da fé católica e
           trilhar um novo capítulo de vida com Deus.
+          <p>
+            Para mais informações, dúvidas ou sugestões, entre em contato
+            através do e-mail{" "}
+            <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>.
+          </p>
         </p>
       </div>
     </div>
