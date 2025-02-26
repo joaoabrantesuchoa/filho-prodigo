@@ -58,5 +58,11 @@
     "typescript": "^5",
     "typescript-eslint": "^8.19.0",
     "velite": "^0.1.0-beta.11"
+  },
+  "pnpm": {
+    "ignoredBuiltDependencies": [
+      "esbuild",
+      "sharp"
+    ]
   }
 }
