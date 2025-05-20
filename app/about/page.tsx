@@ -46,12 +46,33 @@ export default async function AboutPage() {
           caminhada de fé. Se você se encontra nesse caminho de retorno, Filho
           Pródigo é o lugar ideal para redescobrir a beleza da fé católica e
           trilhar um novo capítulo de vida com Deus.
-          <p>
-            Para mais informações, dúvidas ou sugestões, entre em contato
-            através do e-mail{" "}
-            <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>.
-          </p>
         </p>
+      </div>
+
+      <div className="flex flex-col items-start gap-4 md:flex-row md:justify-between md:gap-8">
+        <div className="flex-1 space-x-4">
+          <h2 className="inline-block font-black text-4xl lg:text-5xl">
+            Colaboradores e pessoas que ajudaram
+          </h2>
+
+          <ul className="list-disc pl-6 text-lg mt-4">
+            <li>
+              <a
+                href="https://github.com/laysasantos2"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:text-primary"
+              >
+                Laysa Santos
+              </a>{" "}
+              – Desenvolvimento
+            </li>
+            <li>
+              João Gabriel Abrantes de Oliviera Uchôa – Desenvolvimento e
+              criação dos posts
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   );
